@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Example</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      padding: 12px 25px;
+      color: #f1f1f1;
+    }
+
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #00c4b4;
+    }
+
+    .navbar .links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .links a {
+      color: #f1f1f1;
+      text-decoration: none;
+      padding: 6px 12px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .links a:hover {
+      background: #00c4b4;
+      color: #1a1a1a;
+      border-radius: 6px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+      background: #fff;
+      min-height: 80vh;
+    }
+
+    .box {
+      width: 180px;
+      height: 140px;
+      background: linear-gradient(135deg, #00c4b4, #007d7c);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 17px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      background: #1a1a1a;
+      color: #bbb;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="navbar">
+    <div class="logo">MyWebsite</div>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+  </div>
+
+  <footer>
+    © 2025 MyWebsite. All rights reserved.
+  </footer>
+</body>
+</html>
