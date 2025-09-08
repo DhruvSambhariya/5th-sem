@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>matrix</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url('https://png.pngtree.com/background/20250108/original/pngtree-twinkling-star-field-a-captivating-cosmic-background-for-your-banner-picture-image_13347278.jpg') no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      gap: 20px;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      padding: 5px;
+      margin : 4px;
+      border-radius: 0px;
+      box-shadow: 0 4px 10px rgba(92, 14, 78, 0.6);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcJP9UKsCJZh9s4p_lyi_hf_QjMZWDDli63Q&s');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://t4.ftcdn.net/jpg/03/86/82/73/360_F_386827376_uWOOhKGk6A4UVL5imUBt20Bh8cmODqzx.jpg');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://thumbs.dreamstime.com/b/tropical-neon-illustration-palm-trees-sunset-over-ocean-retro-style-summer-travel-to-miami-beach-s-synthwave-vivid-360081018.jpg');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://img.freepik.com/free-vector/sunset-landscape-with-lake-clouds-red-sky-silhouettes-hills-trees-coast_107791-4670.jpg?semt=ais_incoming&w=740&q=80');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/025/896/643/large/motion-of-moon-from-left-to-right-in-lunar-phase-2d-computer-rendering-motion-graphic-video.jpg');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGs2fHqpegYjSdhigW1cTqm_pLJS-zRT92g&s');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://img.freepik.com/free-vector/sunset-landscape-with-lake-clouds-red-sky-silhouettes-hills-trees-coast_107791-4670.jpg?semt=ais_incoming&w=740&q=80');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/025/896/643/large/motion-of-moon-from-left-to-right-in-lunar-phase-2d-computer-rendering-motion-graphic-video.jpg');">
+      <div class="overlay"></div>
+    </div>
+    <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGs2fHqpegYjSdhigW1cTqm_pLJS-zRT92g&s');">
+      <div class="overlay"></div>
+    </div>
+  </div>
+</body>
+</html>
