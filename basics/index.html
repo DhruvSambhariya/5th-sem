@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Webpage</title>
+
+    <!-- React via CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      .header-logo {
+        width: 100px;
+        margin-right: 20px;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        margin-left: auto;
+        gap: 20px;
+      }
+
+      .nav-list li {
+        cursor: pointer;
+      }
+
+      .search {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .search input {
+        padding: 8px;
+        width: 200px;
+      }
+
+      .search button {
+        padding: 8px 12px;
+        margin-left: 5px;
+      }
+
+      .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .product {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        width: 150px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .prod-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .footer {
+        background-color: #232f3e;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const Header = () => {
+        return (
+          <div className="header">
+            <img
+              className="header-logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png"
+              alt="Amazon logo"
+            />
+            <h2>Amazon Webpage</h2>
+            <ul className="nav-list">
+              <li>Home</li>
+              <li>Cart</li>
+              <li>About</li>
+            </ul>
+          </div>
+        );
+      };
+
+      const Search = () => {
+        return (
+          <div className="search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search..."
+            />
+            <button type="button">Search</button>
+          </div>
+        );
+      };
+
+      const Product = ({ title, price, img }) => {
+        return (
+          <div className="product">
+            <img className="prod-img" src={img} alt={title} />
+            <h4>{title}</h4>
+            <h5>${price}</h5>
+          </div>
+        );
+      };
+
+      const Body = () => {
+        const products = [
+          { title: "Headphones", price: 29.99, img: "https://png.pngtree.com/png-vector/20220207/ourmid/pngtree-modern-headphones-png-image_4393933.png" },
+,
+          { title: "Keyboard", price: 49.99, img: "https://www.trust.com/en/product/25886-gxt-833-thado-tkl-illuminated-keyboard-us" },
+          { title: "Mouse", price: 19.99, img: "https://www.vhv.rs/viewpic/hbohTih_computer-mouse-png-transparent-png/" },
+          { title: "Monitor", price: 129.99, img: "https://www.pngwing.com/en/search?q=monitor" },
+          { title: "Smartwatch", price: 89.99, img: "https://www.pngwing.com/en/search?q=monitor" },
+        ];
+
+        return (
+          <div className="body-container">
+            <Search />
+            <div className="product-container">
+              {products.map((p, i) => (
+                <Product key={i} title={p.title} price={p.price} img={p.img} />
+              ))}
+            </div>
+          </div>
+        );
+      };
+
+      const Footer = () => {
+        return (
+          <div className="footer">
+            <p>© 2025 Amazon Clone | All rights reserved</p>
+          </div>
+        );
+      };
+
+      const App = () => {
+        return (
+          <div className="app">
+            <Header />
+            <Body />
+            <Footer />
+          </div>
+        );
+      };
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
